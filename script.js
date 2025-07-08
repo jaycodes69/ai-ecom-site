@@ -129,13 +129,13 @@ function displayProducts(productsToShow) {
     productCard.className = "product-card";
     productCard.innerHTML = `
             <div class="product-image">
-                <i class="${product.icon}"></i>
+                <i class="₹{product.icon}"></i>
             </div>
             <div class="product-info">
-                <h3>${product.name}</h3>
-                <p>${product.description}</p>
-                <div class="product-price">$${product.price.toFixed(2)}</div>
-                <button class="add-to-cart" onclick="addToCart(${product.id})">
+                <h3>₹{product.name}</h3>
+                <p>₹{product.description}</p>
+                <div class="product-price">₹₹{product.price.toFixed(2)}</div>
+                <button class="add-to-cart" onclick="addToCart(₹{product.id})">
                     Add to Cart
                 </button>
             </div>
@@ -219,16 +219,16 @@ function updateCartUI() {
       cartItem.className = "cart-item";
       cartItem.innerHTML = `
                 <div class="cart-item-image">
-                    <i class="${item.icon}"></i>
+                    <i class="₹{item.icon}"></i>
                 </div>
                 <div class="cart-item-details">
-                    <h4>${item.name}</h4>
-                    <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                    <h4>₹{item.name}</h4>
+                    <div class="cart-item-price">₹₹{item.price.toFixed(2)}</div>
                     <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
-                        <span style="margin: 0 10px;">${item.quantity}</span>
-                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
-                        <button class="quantity-btn" onclick="removeFromCart(${item.id})" style="margin-left: 10px; background: #dc3545; color: white;">×</button>
+                        <button class="quantity-btn" onclick="updateQuantity(₹{item.id}, -1)">-</button>
+                        <span style="margin: 0 10px;">₹{item.quantity}</span>
+                        <button class="quantity-btn" onclick="updateQuantity(₹{item.id}, 1)">+</button>
+                        <button class="quantity-btn" onclick="removeFromCart(₹{item.id})" style="margin-left: 10px; background: #dc3545; color: white;">×</button>
                     </div>
                 </div>
             `;
@@ -262,7 +262,7 @@ function checkout() {
     0,
   );
   alert(
-    `Thank you for your purchase! Total: $${total.toFixed(2)}\n\nThis is a demo - no actual payment was processed.`,
+    `Thank you for your purchase! Total: ₹₹{total.toFixed(2)}\n\nThis is a demo - no actual payment was processed.`,
   );
 
   // Clear cart
@@ -510,16 +510,16 @@ function updateCartUI() {
       cartItem.className = "cart-item";
       cartItem.innerHTML = `
                 <div class="cart-item-image">
-                    <i class="${item.icon}"></i>
+                    <i class="₹{item.icon}"></i>
                 </div>
                 <div class="cart-item-details">
-                    <h4>${item.name}</h4>
-                    <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                    <h4>₹{item.name}</h4>
+                    <div class="cart-item-price">₹₹{item.price.toFixed(2)}</div>
                     <div class="quantity-controls">
-                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
-                        <span style="margin: 0 10px;">${item.quantity}</span>
-                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
-                        <button class="quantity-btn" onclick="removeFromCart(${item.id})" style="margin-left: 10px; background: #dc3545; color: white;">×</button>
+                        <button class="quantity-btn" onclick="updateQuantity(₹{item.id}, -1)">-</button>
+                        <span style="margin: 0 10px;">₹{item.quantity}</span>
+                        <button class="quantity-btn" onclick="updateQuantity(₹{item.id}, 1)">+</button>
+                        <button class="quantity-btn" onclick="removeFromCart(₹{item.id})" style="margin-left: 10px; background: #dc3545; color: white;">×</button>
                     </div>
                 </div>
             `;
